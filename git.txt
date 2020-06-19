@@ -1,0 +1,42 @@
+git config --global user.name "zhangsan001"
+git config --global user.email "zhangsan001@qq.com"
+
+git clone git@10.134.150.205:F3236347/test.git
+ssh-keygen -t rsa -c "zhangsan001@qq.com"
+
+git init 
+
+git add <file>  
+git status 
+git commit -m "commit files"
+
+git rm <file>
+git status
+git commit -m "delete files"
+
+git log
+git reflog
+git reset --hard HEAD^
+git reset --hard HEAD^^
+git reset --hard HEAD~100
+git reset --hard <commit_id>
+
+git checkout -- <file>
+git reset HEAD <file>
+
+git remote add origin git@10.134.150.205:F3236347/test.git
+git remote rm origin 
+git remote
+
+git push origin master 
+	
+
+git checkout -b dev 
+git branch dev
+git checkout dev
+git merge dev
+git branch -d dev
+git switch -c dev
+git branch -d dev
+
+git merge --no-ff -m "merge with no-ff" dev
